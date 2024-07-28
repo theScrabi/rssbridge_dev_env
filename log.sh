@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker logs rssbridge -f
+podman logs -f rssbridge

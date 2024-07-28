@@ -1,7 +1,7 @@
 #!/bin/bash
-docker run \
-    -d \
+podman run \
+	-d \
     --name "rssbridge" \
-    --mount "type=bind,source=$(pwd)/rss-bridge/,target=/app" \
+    -v "$(pwd)/rss-bridge/:/app:Z" \
     -p "8081:80" \
     rssbridge

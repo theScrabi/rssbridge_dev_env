@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker build --tag=rssbridge rss-bridge
+cp config.ini.php rss-bridge
+podman build --tag=rssbridge rss-bridge
