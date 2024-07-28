@@ -45,7 +45,7 @@ max_filesize = 20
 [cache]
 
 ; Cache type: file, sqlite, memcached, array, null
-type = "memcached"
+type = "null"
 
 ; Allow users to specify custom timeout for specific requests.
 ; true  = enabled
