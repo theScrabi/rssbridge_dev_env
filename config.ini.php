@@ -9,6 +9,8 @@
 ; Only these bridges are available for feed production
 ; How to enable all bridges: enabled_bridges[] = *
 enabled_bridges[] = Nordbayern
+enabled_bridges[] = NurembergerNachrichten
+
 
 ; Defines the timezone used by RSS-Bridge
 ; Find a list of supported timezones at
