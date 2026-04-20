@@ -3,5 +3,5 @@ podman run \
 	-d \
     --name "rssbridge" \
     -v "$(pwd)/rss-bridge/:/app:Z" \
-    -p "8081:80" \
+    -p "8088:80" \
     rssbridge
