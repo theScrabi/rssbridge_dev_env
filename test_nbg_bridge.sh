@@ -23,17 +23,24 @@ pegnitz
 roth
 rothenburg-o-d-t
 treuchtlingen
-weissenburg
+weissenburg-gunzenhausen
 EOM
 )
 
 for I in $REGIONS
 do
-    #curl "http://localhost:8081/?action=display&bridge=Nordbayern&region=$I&format=Html" \
-    #    | grep "logo"
-	echo
+	echo -n "testing $I"
+    if curl "http://localhost:8088/?action=display&bridge=Nordbayern&region=$I&format=Html" 2> /dev/null \
+        | grep "author" > /dev/null
+	then
+		echo " ok"
+	else
+		echo " broken"
+	fi
 done
 
+ 
+ 
 REGIONS=$(cat << EOM
 ansbach
 erlangen
@@ -53,6 +60,12 @@ EOM
 
 for I in $REGIONS
 do
-    curl "http://localhost:8081/?action=display&bridge=NurembergerNachrichten&region=$I&format=Html" \
-        | grep "logo"
+	echo -n "testing $I"
+    if not curl "http://localhost:8088/?action=display&bridge=NurembergerNachrichten&region=$I&format=Html" \
+        | grep "author" > /dev/null
+	then
+		echo " ok"
+	else
+		echo " broken"
+	fi
 done

@@ -1,0 +1,4 @@
+{
+    "phpcs.standard": "rss-bridge/phpcs.xml",
+    "phpcs.lintOnType": false 
+}
